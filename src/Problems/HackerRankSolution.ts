@@ -112,7 +112,7 @@ export class HackerRankSolution {
         : console.log(i);
     }
   }
-  public calculateGradingStudents(originalGrades: number[]): number[] {
+  public gradingStudents(originalGrades: number[]): number[] {
     const finalGrades: number[] = [];
     originalGrades.forEach((grade) => {
       if ((grade % 10 >= 7 || grade % 5 >= 3) && grade > 37) {
@@ -128,7 +128,7 @@ export class HackerRankSolution {
     return finalGrades;
   }
 
-  public countApplesAndOranges(
+  public appleAndOrange(
     regionStart: number,
     regionEnd: number,
     appleTreeLocation: number,
@@ -159,7 +159,7 @@ export class HackerRankSolution {
     return result;
   }
 
-  public kangaroo(
+  public numberLineJumps(
     firstKangarooLocation: number,
     firstKangarooSpeed: number,
     secondKangarooLocation: number,
@@ -197,7 +197,7 @@ export class HackerRankSolution {
     return validCount;
   }
 
-  public breakingRecords(scores: number[]): number[] {
+  public breakingTheRecords(scores: number[]): number[] {
     const result: number[] = [0, 0];
     let mostPoint = scores[0];
     let leastPoint = scores[0];
@@ -214,19 +214,19 @@ export class HackerRankSolution {
     return result;
   }
 
-  public subArrayDivision(
+  public subarrayDivision(
     segments: number[],
     day: number,
     month: number
   ): number {
     let segmentCount = 0;
     for (let i = 0; i < segments.length; i++) {
-      let subArray = segments.slice(i, i + month);
-      let sumOfSubArray = subArray.reduce(
+      let subarray = segments.slice(i, i + month);
+      let sumOfSubarray = subarray.reduce(
         (acumulator, currentValue) => acumulator + currentValue,
         0
       );
-      if (sumOfSubArray == day) {
+      if (sumOfSubarray == day) {
         segmentCount++;
       }
     }

@@ -20,16 +20,16 @@ const hackerRankSolution = new HackerRankSolution()
 
 // hackerRankSolution.fizzBuzz(30)
 
-// console.log(hackerRankSolution.calculateGradingStudents([73,67,38,33,78,79,80]))
+// console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
 
-// console.log(hackerRankSolution.countApplesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
+// console.log(hackerRankSolution.applesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
 
-// console.log(hackerRankSolution.kangaroo(4523, 8092, 9419 ,8076))
+// console.log(hackerRankSolution.numberLineJumps(4523, 8092, 9419 ,8076))
 
 // console.log(hackerRankSolution.betweenTwoSets([2,3],[2,4]))
 
-// console.log(hackerRankSolution.breakingRecords([10,5,20,20,4,5,2,25,1]))
+// console.log(hackerRankSolution.breakingTheRecords([10,5,20,20,4,5,2,25,1]))
 
-// console.log(hackerRankSolution.subArrayDivision([2,2,1,3,2],4,2))
+// console.log(hackerRankSolution.subarrayDivision([2,2,1,3,2],4,2))
 
 //console.log(hackerRankSolution.divisibleSumPairs(6,3,[1,3,2,6,1,2]))
