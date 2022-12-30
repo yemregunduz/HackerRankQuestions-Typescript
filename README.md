@@ -16,5 +16,6 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 Run `npm run dev` to run the project in watch mode.
 
 # Guide 
+The names of the methods in the HackerRankSolutions class are the same as the titles of the questions in HackerRank.
 If you want to test the solutions, you can create an instance of the HackerRankSolutions class on index.ts, give the relevant parameters and print the result to the console. 
 Examples where solutions are tested are available in index.ts.
