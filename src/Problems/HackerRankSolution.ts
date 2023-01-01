@@ -13,9 +13,10 @@ export class HackerRankSolution {
 
   public aVeryBigSum(ar: number[]): number {
     let sum = 0;
-    ar.forEach((number) => {
-      sum += number;
-    });
+    for (let i = 0; i < ar.length; i++) {
+      sum += ar[i];
+      
+    }
     return sum;
   }
 
@@ -36,9 +37,9 @@ export class HackerRankSolution {
 
   public plusMinus(arr: number[]): number[] {
     const result: number[] = [0, 0, 0];
-    arr.forEach((number) => {
-      number > 0 ? result[0]++ : number < 0 ? result[1]++ : result[2]++;
-    });
+    for (let i = 0; i < arr.length; i++) {
+      arr[i] > 0 ? result[0]++ : arr[i] < 0 ? result[1]++ : result[2]++ 
+    }
     return result.map((number) => number / arr.length);
   }
 
