@@ -264,17 +264,50 @@ export class HackerRankSolution {
     return sortedArr[0].id;
   }
 
-  public dayOfTheProgrammer(year:number) : string{
-        let typeCalendar = (year <= 1917 ? 'Julian' : year === 1918 ? 'Transition' : 'Gregorian');
-    
-        if(typeCalendar === 'Julian'){
-            return (year % 4 === 0) ? `12.09.${year}` : `13.09.${year}`;
-        }
+  public dayOfTheProgrammer(year: number): string {
+    let typeCalendar =
+      year <= 1917 ? "Julian" : year === 1918 ? "Transition" : "Gregorian";
 
-        if(typeCalendar === 'Transition'){
-            return `26.09.${year}`;
-        }
-        return ((year % 400 === 0) || ((year % 4 === 0) && !(year % 100 === 0))) ? `12.09.${year}` : `13.09.${year}`;
-    
+    if (typeCalendar === "Julian") {
+      return year % 4 === 0 ? `12.09.${year}` : `13.09.${year}`;
+    }
+
+    if (typeCalendar === "Transition") {
+      return `26.09.${year}`;
+    }
+    return year % 400 === 0 || (year % 4 === 0 && !(year % 100 === 0))
+      ? `12.09.${year}`
+      : `13.09.${year}`;
+  }
+
+  public billDivision(
+    bill: number[],
+    annaDeclinedItemIndex: number,
+    annaContributed: number
+  ) {
+    let sum = 0;
+    for (let i = 0; i < bill.length; i++) {
+      sum += bill[i];
+    }
+    let share = (sum - bill[annaDeclinedItemIndex]) / 2;
+    annaContributed == share
+      ? console.log("Bon Appetit ")
+      : console.log(annaContributed - share);
+  }
+
+  public salesByMatch(n: number, numbers: number[]): number {
+    // Why is array size passed as parameter in hacker-rank? numbers.length ???
+    let numberOfPairs = 0;
+    const result: { id: number; count: number }[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+      let current = result.find((x) => x.id == numbers[i]);
+      current == null
+        ? result.push({ id: numbers[i], count: 1 })
+        : current.count++;
+      if (current != null && current.count % 2 == 0) {
+        numberOfPairs++;
+      }
+    }
+    return numberOfPairs;
   }
 }

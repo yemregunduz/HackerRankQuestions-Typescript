@@ -19,4 +19,7 @@ const hackerRankSolution = new HackerRankSolution_1.HackerRankSolution();
 // console.log(hackerRankSolution.subarrayDivision([2,2,1,3,2],4,2))
 //console.log(hackerRankSolution.divisibleSumPairs(6,3,[1,3,2,6,1,2]))
 // console.log(hackerRankSolution.migratoryBirds([44,82,34,35,22,34,82,82,55,3,5,12,3,7,14,12,22,22]))
+// console.log(hackerRankSolution.dayOfTheProgrammer(2017))
+// hackerRankSolution.billDivision([3,5,7,10,12],2,15)
+// console.log(hackerRankSolution.salesByMatch(9,[10, 20, 20, 10, 10, 30, 50, 10, 20]))
 //# sourceMappingURL=index.js.map
