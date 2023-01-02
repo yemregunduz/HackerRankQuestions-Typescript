@@ -15,7 +15,6 @@ export class HackerRankSolution {
     let sum = 0;
     for (let i = 0; i < ar.length; i++) {
       sum += ar[i];
-      
     }
     return sum;
   }
@@ -38,7 +37,7 @@ export class HackerRankSolution {
   public plusMinus(arr: number[]): number[] {
     const result: number[] = [0, 0, 0];
     for (let i = 0; i < arr.length; i++) {
-      arr[i] > 0 ? result[0]++ : arr[i] < 0 ? result[1]++ : result[2]++ 
+      arr[i] > 0 ? result[0]++ : arr[i] < 0 ? result[1]++ : result[2]++;
     }
     return result.map((number) => number / arr.length);
   }
@@ -251,4 +250,15 @@ export class HackerRankSolution {
     return divisibleSumPairsCount;
   }
 
+  public migratoryBirds(birds: number[]): number {
+    let birdsCount: { id: number; count: number }[] = [];
+    for (let i = 0; i < birds.length; i++) {
+      let currentBird = birdsCount.find((x) => x.id == birds[i])
+      currentBird == null ? birdsCount.push({id: birds[i],count: 1}) : currentBird.count++
+    }
+    const sortedArr = birdsCount.sort((a, b) => {
+      return b.count - a.count || a.id - b.id;
+    });
+    return sortedArr[0].id;
+  }
 }
