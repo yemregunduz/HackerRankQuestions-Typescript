@@ -19,3 +19,6 @@ Run `npm run dev` to run the project in watch mode.
 The names of the methods in the HackerRankSolutions class are the same as the titles of the questions in HackerRank.
 If you want to test the solutions, you can create an instance of the HackerRankSolutions class on index.ts, give the relevant parameters and print the result to the console. 
 Examples where solutions are tested are available in index.ts.
+
+#Author
+Yunus Emre Gündüz
