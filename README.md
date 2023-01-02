@@ -20,5 +20,5 @@ The names of the methods in the HackerRankSolutions class are the same as the ti
 If you want to test the solutions, you can create an instance of the HackerRankSolutions class on index.ts, give the relevant parameters and print the result to the console. 
 Examples where solutions are tested are available in index.ts.
 
-#Author
+# Author
 Yunus Emre Gündüz
