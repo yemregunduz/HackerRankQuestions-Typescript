@@ -20,7 +20,7 @@ const hackerRankSolution = new HackerRankSolution()
 
 // hackerRankSolution.fizzBuzz(30)
 
-// console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
+console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
 
 // console.log(hackerRankSolution.applesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
 

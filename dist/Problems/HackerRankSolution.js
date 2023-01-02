@@ -109,7 +109,7 @@ class HackerRankSolution {
     gradingStudents(originalGrades) {
         const finalGrades = [];
         originalGrades.forEach((grade) => {
-            if ((grade % 10 >= 7 || grade % 5 >= 3) && grade > 37) {
+            if (grade > 37) {
                 grade % 10 > 7
                     ? (grade += 10 - (grade % 10))
                     : grade % 5 >= 3

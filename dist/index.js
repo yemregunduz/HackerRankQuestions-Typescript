@@ -11,7 +11,7 @@ const hackerRankSolution = new HackerRankSolution_1.HackerRankSolution();
 // console.log(hackerRankSolution.birthdayCakeCandles([15,32,33,12,32,14,5,15,15,15,15,33]))
 // console.log(hackerRankSolution.timeConversion("12:45:54PM"))
 // hackerRankSolution.fizzBuzz(30)
-// console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
+console.log(hackerRankSolution.gradingStudents([73, 67, 38, 33, 78, 79, 80]));
 // console.log(hackerRankSolution.applesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
 // console.log(hackerRankSolution.numberLineJumps(4523, 8092, 9419 ,8076))
 // console.log(hackerRankSolution.betweenTwoSets([2,3],[2,4]))
