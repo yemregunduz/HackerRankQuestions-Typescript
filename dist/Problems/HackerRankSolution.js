@@ -211,12 +211,24 @@ class HackerRankSolution {
         let birdsCount = [];
         for (let i = 0; i < birds.length; i++) {
             let currentBird = birdsCount.find((x) => x.id == birds[i]);
-            currentBird == null ? birdsCount.push({ id: birds[i], count: 1 }) : currentBird.count++;
+            currentBird == null
+                ? birdsCount.push({ id: birds[i], count: 1 })
+                : currentBird.count++;
         }
         const sortedArr = birdsCount.sort((a, b) => {
             return b.count - a.count || a.id - b.id;
         });
         return sortedArr[0].id;
+    }
+    dayOfTheProgrammer(year) {
+        let typeCalendar = (year <= 1917 ? 'Julian' : year === 1918 ? 'Transition' : 'Gregorian');
+        if (typeCalendar === 'Julian') {
+            return (year % 4 === 0) ? `12.09.${year}` : `13.09.${year}`;
+        }
+        if (typeCalendar === 'Transition') {
+            return `26.09.${year}`;
+        }
+        return ((year % 400 === 0) || ((year % 4 === 0) && !(year % 100 === 0))) ? `12.09.${year}` : `13.09.${year}`;
     }
 }
 exports.HackerRankSolution = HackerRankSolution;
