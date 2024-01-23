@@ -1,0 +1,10 @@
+# .gitignore
+
+# VSCode
+.vscode/
+
+# Node.js
+node_modules/
+
+# Proje çıktıları (örneğin, derlenmiş dosyalar)
+dist/
