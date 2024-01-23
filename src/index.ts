@@ -1,6 +1,6 @@
-import { HackerRankSolution } from "./Problems/HackerRankSolution";
+import { HackerRankSolution } from './Problems/HackerRankSolution';
 
-const hackerRankSolution = new HackerRankSolution()
+const hackerRankSolution = new HackerRankSolution();
 
 // console.log(hackerRankSolution.compareTheTriplets([3,2,1],[5,1,2]))
 
@@ -20,7 +20,7 @@ const hackerRankSolution = new HackerRankSolution()
 
 // hackerRankSolution.fizzBuzz(30)
 
-console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
+// console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
 
 // console.log(hackerRankSolution.applesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
 
@@ -41,3 +41,11 @@ console.log(hackerRankSolution.gradingStudents([73,67,38,33,78,79,80]))
 // hackerRankSolution.billDivision([3,5,7,10,12],2,15)
 
 // console.log(hackerRankSolution.salesByMatch(9,[10, 20, 20, 10, 10, 30, 50, 10, 20]))
+
+// console.log(hackerRankSolution.drawingBook(6,2))
+
+// console.log(hackerRankSolution.countingValleys(8,"UDDDUDUU"))
+
+// console.log(hackerRankSolution.electronicsShop([3,1],[5,2,8],10))
+
+// console.log(hackerRankSolution.catsAndAMouse(1,3,2))

@@ -43,15 +43,15 @@ export class HackerRankSolution {
   }
 
   public staircase(count: number): string {
-    let result: string = "";
+    let result: string = '';
     for (let i = 1; i <= count; i++) {
       for (let j = 0; j < count - i; j++) {
-        result += " ";
+        result += ' ';
       }
       for (let k = 0; k < i; k++) {
-        result += "#";
+        result += '#';
       }
-      result += "\n";
+      result += '\n';
     }
     return result;
   }
@@ -59,7 +59,7 @@ export class HackerRankSolution {
   public miniMaxSum(arr: number[]): { max: number; min: number } {
     const result = {
       max: 0,
-      min: 0,
+      min: 0
     };
     const sortedArr = arr.sort((a, b) => {
       return a - b;
@@ -88,15 +88,12 @@ export class HackerRankSolution {
 
   public timeConversion(str: string): string {
     const hour: number = parseInt(str[0] + str[1]);
-    if (str.includes("P")) {
+    if (str.includes('P')) {
       let result = hour == 12 ? hour : hour + 12;
       str = str.replace(str[0] + str[1], result.toString());
-    } else if (str.includes("A")) {
+    } else if (str.includes('A')) {
       let result = hour >= 12 ? hour - 12 : hour;
-      str = str.replace(
-        str[0] + str[1],
-        result < 10 ? "0" + result.toString() : result.toString()
-      );
+      str = str.replace(str[0] + str[1], result < 10 ? '0' + result.toString() : result.toString());
     }
     return (str = str.slice(0, str.length - 2));
   }
@@ -104,11 +101,11 @@ export class HackerRankSolution {
   public fizzBuzz(maxNumber: number): void {
     for (let i = 1; i <= maxNumber; i++) {
       i % 3 == 0 && i % 5 != 0
-        ? console.log("Fizz")
+        ? console.log('Fizz')
         : i % 5 == 0 && i % 3 != 0
-        ? console.log("Buzz")
+        ? console.log('Buzz')
         : i % 15 == 0
-        ? console.log("Fizzbuzz")
+        ? console.log('Fizzbuzz')
         : console.log(i);
     }
   }
@@ -116,11 +113,7 @@ export class HackerRankSolution {
     const finalGrades: number[] = [];
     originalGrades.forEach((grade) => {
       if (grade > 37) {
-        grade % 10 > 7
-          ? (grade += 10 - (grade % 10))
-          : grade % 5 >= 3
-          ? (grade += 5 - (grade % 5))
-          : grade;
+        grade % 10 > 7 ? (grade += 10 - (grade % 10)) : grade % 5 >= 3 ? (grade += 5 - (grade % 5)) : grade;
       }
       finalGrades.push(grade);
     });
@@ -138,21 +131,15 @@ export class HackerRankSolution {
   ): { countOfApples: number; countOfOranges: number } {
     let result = {
       countOfApples: 0,
-      countOfOranges: 0,
+      countOfOranges: 0
     };
     distanceOfApplesToAppleTree.forEach((distance) => {
-      if (
-        appleTreeLocation + distance >= regionStart &&
-        appleTreeLocation + distance <= regionEnd
-      ) {
+      if (appleTreeLocation + distance >= regionStart && appleTreeLocation + distance <= regionEnd) {
         result.countOfApples++;
       }
     });
     distanceOfOrangesToOrangeTree.forEach((distance) => {
-      if (
-        orangeTreeLocation + distance >= regionStart &&
-        orangeTreeLocation + distance <= regionEnd
-      ) {
+      if (orangeTreeLocation + distance >= regionStart && orangeTreeLocation + distance <= regionEnd) {
         result.countOfOranges++;
       }
     });
@@ -165,22 +152,15 @@ export class HackerRankSolution {
     secondKangarooLocation: number,
     secondKangarooSpeed: number
   ): string {
-    let result = "NO";
+    let result = 'NO';
     if (secondKangarooSpeed < firstKangarooSpeed) {
-      if (
-        (secondKangarooLocation - firstKangarooLocation) %
-          (firstKangarooSpeed - secondKangarooSpeed) ==
-        0
-      ) {
-        result = "YES";
+      if ((secondKangarooLocation - firstKangarooLocation) % (firstKangarooSpeed - secondKangarooSpeed) == 0) {
+        result = 'YES';
       } else {
-        result = "NO";
+        result = 'NO';
       }
-    } else if (
-      secondKangarooSpeed == firstKangarooSpeed &&
-      secondKangarooLocation == firstKangarooLocation
-    ) {
-      result = "YES";
+    } else if (secondKangarooSpeed == firstKangarooSpeed && secondKangarooLocation == firstKangarooLocation) {
+      result = 'YES';
     }
     return result;
   }
@@ -214,18 +194,11 @@ export class HackerRankSolution {
     return result;
   }
 
-  public subarrayDivision(
-    segments: number[],
-    day: number,
-    month: number
-  ): number {
+  public subarrayDivision(segments: number[], day: number, month: number): number {
     let segmentCount = 0;
     for (let i = 0; i < segments.length; i++) {
       let subarray = segments.slice(i, i + month);
-      let sumOfSubarray = subarray.reduce(
-        (acumulator, currentValue) => acumulator + currentValue,
-        0
-      );
+      let sumOfSubarray = subarray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
       if (sumOfSubarray == day) {
         segmentCount++;
       }
@@ -233,11 +206,7 @@ export class HackerRankSolution {
     return segmentCount;
   }
 
-  public divisibleSumPairs(
-    lengthOfNumbers: number,
-    divisor: number,
-    numbers: number[]
-  ): number {
+  public divisibleSumPairs(lengthOfNumbers: number, divisor: number, numbers: number[]): number {
     // Why is array size passed as parameter in hacker-rank? numbers.length ???
     let divisibleSumPairsCount = 0;
     for (let i = 0; i < lengthOfNumbers; i++) {
@@ -254,9 +223,7 @@ export class HackerRankSolution {
     let birdsCount: { id: number; count: number }[] = [];
     for (let i = 0; i < birds.length; i++) {
       let currentBird = birdsCount.find((x) => x.id == birds[i]);
-      currentBird == null
-        ? birdsCount.push({ id: birds[i], count: 1 })
-        : currentBird.count++;
+      currentBird == null ? birdsCount.push({ id: birds[i], count: 1 }) : currentBird.count++;
     }
     const sortedArr = birdsCount.sort((a, b) => {
       return b.count - a.count || a.id - b.id;
@@ -265,34 +232,25 @@ export class HackerRankSolution {
   }
 
   public dayOfTheProgrammer(year: number): string {
-    let typeCalendar =
-      year <= 1917 ? "Julian" : year === 1918 ? "Transition" : "Gregorian";
+    let typeCalendar = year <= 1917 ? 'Julian' : year === 1918 ? 'Transition' : 'Gregorian';
 
-    if (typeCalendar === "Julian") {
+    if (typeCalendar === 'Julian') {
       return year % 4 === 0 ? `12.09.${year}` : `13.09.${year}`;
     }
 
-    if (typeCalendar === "Transition") {
+    if (typeCalendar === 'Transition') {
       return `26.09.${year}`;
     }
-    return year % 400 === 0 || (year % 4 === 0 && !(year % 100 === 0))
-      ? `12.09.${year}`
-      : `13.09.${year}`;
+    return year % 400 === 0 || (year % 4 === 0 && !(year % 100 === 0)) ? `12.09.${year}` : `13.09.${year}`;
   }
 
-  public billDivision(
-    bill: number[],
-    annaDeclinedItemIndex: number,
-    annaContributed: number
-  ) {
+  public billDivision(bill: number[], annaDeclinedItemIndex: number, annaContributed: number) {
     let sum = 0;
     for (let i = 0; i < bill.length; i++) {
       sum += bill[i];
     }
     let share = (sum - bill[annaDeclinedItemIndex]) / 2;
-    annaContributed == share
-      ? console.log("Bon Appetit ")
-      : console.log(annaContributed - share);
+    annaContributed == share ? console.log('Bon Appetit ') : console.log(annaContributed - share);
   }
 
   public salesByMatch(n: number, numbers: number[]): number {
@@ -301,13 +259,57 @@ export class HackerRankSolution {
     const result: { id: number; count: number }[] = [];
     for (let i = 0; i < numbers.length; i++) {
       let current = result.find((x) => x.id == numbers[i]);
-      current == null
-        ? result.push({ id: numbers[i], count: 1 })
-        : current.count++;
+      current == null ? result.push({ id: numbers[i], count: 1 }) : current.count++;
       if (current != null && current.count % 2 == 0) {
         numberOfPairs++;
       }
     }
     return numberOfPairs;
+  }
+
+  public drawingBook(n: number, p: number): number {
+    return Math.min(Math.floor(p / 2), Math.floor(n / 2) - Math.floor(p / 2));
+  }
+
+  public countingValleys(steps: number, path: string): number {
+    const pathArray = path.split('');
+    let valleyCount = 0;
+    let currentLevel = 0;
+
+    for (let i = 0; i < steps; i++) {
+      if (pathArray[i] == 'U') {
+        currentLevel++;
+        if (currentLevel == 0) {
+          valleyCount++;
+        }
+      } else {
+        currentLevel--;
+      }
+    }
+    return valleyCount;
+  }
+
+  public getMoneySpent(keyboards: number[], drives: number[], balance: number) {
+    let maxAmount = -1;
+    keyboards.forEach((keyboard) => {
+      drives.forEach((drive) => {
+        if (keyboard + drive <= balance && keyboard + drive > maxAmount) {
+          maxAmount = keyboard + drive;
+        }
+      });
+    });
+    return maxAmount;
+  }
+
+  public catAndMouse(catA: number, catB: number, mouse: number): string {
+    let result = '';
+    if (Math.abs(catA - mouse) < Math.abs(catB - mouse)) {
+      result = 'Cat A';
+    } else if (Math.abs(catA - mouse) > Math.abs(catB - mouse)) {
+      result = 'Cat B';
+    } else {
+      result = 'Mouse C';
+    }
+    return result;
   }
 }
